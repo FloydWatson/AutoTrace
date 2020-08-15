@@ -1,3 +1,5 @@
+
+
 const state = {
 
   dummyData: [{
@@ -22,85 +24,85 @@ const state = {
         "stop_lat": -36.99369,
         "stop_lon": 174.8782,
       },
-      stop: {
+      "stop": {
         "id": 2,
         "stop_name": "834 Great South Rd Manukau",
         "stop_lat": -37.00184,
         "stop_lon": 174.88957,
       },
-      stop: {
+      "stop": {
         "id": 3,
         "stop_name": "898 Great South Rd Manukau",
         "stop_lat": -37.00737,
         "stop_lon": 174.88985,
       },
-      stop: {
+      "stop": {
         "id": 4,
         "stop_name": "16 Great South Rd Manurewa",
         "stop_lat": -37.00985,
         "stop_lon": 174.89084,
       },
-      stop: {
+      "stop": {
         "id": 5,
         "stop_name": "46 Great South Rd Manurewa",
         "stop_lat": -37.01212,
         "stop_lon": 174.89175,
       },
-      stop: {
+      "stop": {
         "id": 6,
         "stop_name": "82 Great South Rd Manurewa",
         "stop_lat": -37.01529,
         "stop_lon": 174.89269,
       },
-      stop: {
+      "stop": {
         "id": 7,
         "stop_name": "128 Great South Rd Manurewa",
         "stop_lat": -37.0189,
         "stop_lon": 174.89408,
       },
-      stop: {
+      "stop": {
         "id": 8,
         "stop_name": "Northcrest Way near Great South Rd",
         "stop_lat": -37.02015,
         "stop_lon": 174.89431,
       },
-      stop: {
+      "stop": {
         "id": 9,
         "stop_name": "Maich Rd near Station Rd",
         "stop_lat": -37.02169,
         "stop_lon": 174.89484,
       },
-      stop: {
+      "stop": {
         "id": 10,
         "stop_name": "Stop B Manurewa Interchange",
         "stop_lat": -37.02368,
         "stop_lon": 174.8958,
       },
-      stop: {
+      "stop": {
         "id": 11,
         "stop_name": "44 Weymouth Rd",
         "stop_lat": -37.02559,
         "stop_lon": 174.89297,
       },
-      stop: {
+      "stop": {
         "id": 12,
         "stop_name": "68 Weymouth Rd",
         "stop_lat": -37.02633,
         "stop_lon": 174.89089,
       },
-      stop: {
+      "stop": {
         "id": 13,
         "stop_name": "90 Weymouth Rd",
         "stop_lat": -37.02724,
         "stop_lon": 174.88828,
       },
-      stop: {
+      "stop": {
         "id": 14,
         "stop_name": "126 Weymouth Rd",
         "stop_lat": -37.02822,
         "stop_lon": 174.88554,
       },
-      stop: {
+      "stop": {
         "id": 15,
         "stop_name": "Opp 167 Weymouth Rd",
         "stop_lat": -37.0295,
