@@ -7,16 +7,16 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
-    msg: String
+    msg: String,
   },
-  data(){
+  data() {
     return {
-      test: "Test Data"
-    }
-  }
-}
+      test: "Test Data",
+    };
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
