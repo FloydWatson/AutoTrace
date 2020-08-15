@@ -7,6 +7,8 @@ AutoTrace is written as an extension to the current [NZ COVID tracker app](https
 ### how this app works
 a resident would install the app and enable tracking when the user enters the geofence of a bus, they are considered on the bus, and the app reports this to our server so that we know when and where they joined what but, when the user leaves the bus geofence we keep that, from this, we can find all users who got on the bus at the same time as any user so if a user tests positive for COVID we can find all bus users they shared a bus with for contact tracing, this can be extended to any form of transport if given tracking data of there vehicles, this implementation is far easier for a user compared to the current solution of entering all the data manually something that a lot of kiwis will forget todo
 
+The admin side of this app is for contact tracing use only. It allows for you to enter a user id and see all contacts and there contact details, along with the routes the infected users used allowing for broader contact tracing of people who don’t use the app.
+
 ## how to setup/install program
 
 ### webapp
