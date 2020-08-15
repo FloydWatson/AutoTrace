@@ -10,6 +10,11 @@ const router = new Router({
       name: "home",
       component: () => import("./views/home.vue"),
     },
+    {
+      path: "/tableView",
+      name:"tableView",
+      component: () => import("./views/tableView.vue"),
+    },
   ],
 });
 

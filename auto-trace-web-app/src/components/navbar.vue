@@ -27,10 +27,12 @@ export default {
   props: {
     msg: String,
   },
-  data() {
-    return {
-      test: "Test Data",
-    };
+  methods: {
+    pushToHome() {
+      this.$router.push({
+        path: `/tableView`,
+      });
+    },
   },
 };
 </script>
