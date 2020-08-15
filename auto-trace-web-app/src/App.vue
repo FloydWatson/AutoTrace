@@ -5,12 +5,22 @@
 </template>
 
 <script>
-
+  import { mapActions } from "vuex";
 
 export default {
   name: 'App',
   components: {
     
+  },
+  methods: {
+    ...mapActions(["createRoutes", "createUser", "createUserTrips", "createStops"])
+  },
+  mounted(){
+    this.createRoutes();
+    this.createUser();
+    this.createUserTrips();
+    this.createStops();
+
   }
 }
 </script>
