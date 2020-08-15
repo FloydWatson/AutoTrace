@@ -1,17 +1,16 @@
 <template>
   <div class="container">
     <!-- <h2>HOME</h2> -->
-    <hello-world :msg="'TEST'"></hello-world>
+    <h1>AutoTrace</h1>
+    <iframe width="80%" height="420" src="https://www.youtube.com/embed/oHg5SJYRHA0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
-import helloWorld from '../components/HelloWorld.vue';
 
 export default {
   components:{  
-    helloWorld
   },
   data() {
     return {
