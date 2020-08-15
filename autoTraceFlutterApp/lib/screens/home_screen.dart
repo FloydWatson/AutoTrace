@@ -1,4 +1,10 @@
+
+
 import 'package:flutter/material.dart';
+
+import '../widgets/auto_trace_card.dart';
+import '../widgets/record_visit_card.dart';
+import '../widgets/button_bar_bottom.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key key}) : super(key: key);
@@ -10,171 +16,49 @@ class HomeScreen extends StatelessWidget {
         title: Text('Dashboard'),
         centerTitle: true,
       ),
+      // persistentFooterButtons: [
+
+      //   RaisedButton(onPressed: () {}, child: Text('Hello'))
+      // ],
       body: Container(
         child: Padding(
-          padding: EdgeInsets.only(left: 32, right: 32),
-          child: SingleChildScrollView(
-            child: Container(
-              child: Column(children: [
-                Center(
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 32, 16, 32),
-                    child: Text(
-                      'Protect yourself, your whanau, and your community',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14,
+          padding: EdgeInsets.only(top: 8),
+          child: Column(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.only(left: 32, right: 32),
+                  child: ListView(children: [
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(16, 32, 16, 32),
+                        child: Text(
+                          'Protect yourself, your whanau, and your community',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14,
+                          ),
+                        ),
                       ),
                     ),
-                  ),
-                ),
-                
-                Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: Card(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.all(16),
-                          child: CircleAvatar(
-                            radius: 55,
-                            backgroundColor: Colors.black,
-                            child: CircleAvatar(
-                              backgroundColor: Colors.white,
-                              radius: 52,
-                              child: CircleAvatar(
-                                radius: 45,
-                                backgroundColor: Colors.white,
-                                backgroundImage:
-                                    AssetImage('images/qrCode.png'),
-                              ),
-                            ),
-                          ),
-                        ),
-                        const ListTile(
-                          title: Padding(
-                            padding: const EdgeInsets.all(16),
-                            child: Center(
-                                child: Text(
-                              "Keep track of where you've been",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )),
-                          ),
-                          subtitle: Padding(
-                            padding: const EdgeInsets.all(16),
-                            child: Center(
-                              child: Text(
-                                  'Record the places you visit by scanning NZ COVID Tracer QR codes - or add them manually - using the app'),
-                            ),
-                          ),
-                        ),
-                        Center(
-                          child: Container(
-                            width: double.infinity,
-                            child: Padding(
-                              padding: const EdgeInsets.all(16),
-                              child: GestureDetector(
-                                onTap: () {/* ... */},
-                                child: Container(
-                                  decoration:
-                                      BoxDecoration(color: Colors.black),
-                                  child: Center(
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(16),
-                                      child: const Text(
-                                        'Record a visit',
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
+                    Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: AutoTraceCard(),
                     ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: Card(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.all(16),
-                          child: CircleAvatar(
-                            radius: 55,
-                            backgroundColor: Colors.black,
-                            child: CircleAvatar(
-                              backgroundColor: Colors.white,
-                              radius: 52,
-                              child: CircleAvatar(
-                                radius: 45,
-                                backgroundColor: Colors.white,
-                                backgroundImage:
-                                    AssetImage('images/qrCode.png'),
-                              ),
-                            ),
-                          ),
-                        ),
-                        const ListTile(
-                          title: Padding(
-                            padding: const EdgeInsets.all(16),
-                            child: Center(
-                                child: Text(
-                              "Keep track of where you've been",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )),
-                          ),
-                          subtitle: Padding(
-                            padding: const EdgeInsets.all(16),
-                            child: Center(
-                              child: Text(
-                                  'Record the places you visit by scanning NZ COVID Tracer QR codes - or add them manually - using the app'),
-                            ),
-                          ),
-                        ),
-                        Center(
-                          child: Container(
-                            width: double.infinity,
-                            child: Padding(
-                              padding: const EdgeInsets.all(16),
-                              child: GestureDetector(
-                                onTap: () {/* ... */},
-                                child: Container(
-                                  decoration:
-                                      BoxDecoration(color: Colors.black),
-                                  child: Center(
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(16),
-                                      child: const Text(
-                                        'Record a visit',
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
+                    Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: RecordVisitCard(),
                     ),
-                  ),
+                  ]),
                 ),
-              ]),
-            ),
+              ),
+              ButtonBarBottom()
+            ],
           ),
         ),
       ),
     );
   }
 }
+

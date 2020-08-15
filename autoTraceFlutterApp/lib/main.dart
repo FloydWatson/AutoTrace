@@ -14,6 +14,8 @@ class MyApp extends StatelessWidget {
       title: 'AutoTrace',
       theme: ThemeData(
         primarySwatch: Colors.yellow,
+        // buttonBarTheme: ButtonBarThemeData(backgroundColor: Colors.black),
+        //bottomNavigationBarTheme: BottomNavigationBarThemeData(backgroundColor: Colors.black),
 
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
