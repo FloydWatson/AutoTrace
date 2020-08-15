@@ -9,8 +9,9 @@
       <div class="content">
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link" href="#">Map View</a>
-            <a class="nav-item nav-link" href="#">Table View</a>
+            <a @click="pushHomeToHome" class="nav-item nav-link" href="#">Home</a>
+            <a @click="pushMapViewToHome" class="nav-item nav-link" href="#">Map View</a>
+            <a @click="pushTableViewToHome" class="nav-item nav-link" href="#">Table View</a>
           </div>
         </div>
       </div>
@@ -28,9 +29,19 @@ export default {
     msg: String,
   },
   methods: {
-    pushToHome() {
+    pushTableViewToHome() {
       this.$router.push({
         path: `/tableView`,
+      });
+    },
+    pushMapViewToHome() {
+      this.$router.push({
+        path: `/mapView`,
+      });
+    },
+    pushHomeToHome() {
+      this.$router.push({
+        path: `/home`,
       });
     },
   },
