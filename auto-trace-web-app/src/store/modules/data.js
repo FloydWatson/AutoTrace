@@ -114,7 +114,7 @@ const actions = {
         startStopId: "4",
         endStopId: "8",
         startTime: "1595475903",
-        endTime: "595479503",
+        endTime: "1595479503",
         routeId: "3",
       },
       {
@@ -123,7 +123,7 @@ const actions = {
         startStopId: "6",
         endStopId: "1",
         startTime: "1595472303",
-        endTime: "595475003",
+        endTime: "1595475003",
         routeId: "3",
       },
       {
@@ -132,7 +132,7 @@ const actions = {
         startStopId: "1",
         endStopId: "2",
         startTime: "1595299803",
-        endTime: "595303003",
+        endTime: "1595303003",
         routeId: "2",
       },
       {
@@ -141,7 +141,7 @@ const actions = {
         startStopId: "3",
         endStopId: "1",
         startTime: "1594788303",
-        endTime: "594788453",
+        endTime: "1594788453",
         routeId: "1",
       },
       {
@@ -150,7 +150,7 @@ const actions = {
         startStopId: "1",
         endStopId: "4",
         startTime: "1595220303",
-        endTime: "595221503",
+        endTime: "1595221503",
         routeId: "1",
       },
       {
@@ -159,7 +159,7 @@ const actions = {
         startStopId: "1",
         endStopId: "7",
         startTime: "1594683903",
-        endTime: "594684203",
+        endTime: "1594684203",
         routeId: "2",
       },
     ];
