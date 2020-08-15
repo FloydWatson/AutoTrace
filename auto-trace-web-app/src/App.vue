@@ -9,9 +9,23 @@
 import NavBar from './components/navbar.vue';
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     NavBar,
+  },
+  methods: {
+    ...mapActions([
+      "createRoutes",
+      "createUser",
+      "createUserTrips",
+      "createStops",
+    ]),
+  },
+  mounted() {
+    this.createRoutes();
+    this.createUser();
+    this.createUserTrips();
+    this.createStops();
   },
 };
 </script>
