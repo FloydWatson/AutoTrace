@@ -1,54 +1,86 @@
 <template>
   <div class="">
     <!-- <h2>HOME</h2> -->
-    <h1>AutoTrace</h1>
+    <img
+      src="../assets/auto_logo.png"
+      id="autoLogoTitle"
+      alt="auto trace icon"
+    /><br />
     <iframe
       width="60%"
       height="669"
-      src="https://www.youtube.com/embed/oHg5SJYRHA0"
+      src="https://www.youtube.com/embed/qYQxb3Bnp0I"
       frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
 
-    <div class="row">
-      <div class="card-body" @click="chosenGraph = 1">
-        <h4 class="card-title">
-          Transport Carbon Emissions (EXPOSED)
-        </h4>
-        <p class="card-text">
-          On average, each year people in New Zealand spend nearly 1,500 million
-          hours travelling, and travel nearly 52,000 million km, in over 6,500
-          million trip legs. However, only 4.9% of our total travel time is
-          using public transport. To take steps to improve New Zealand's
-          greenhouse emissions, the most impactful changes would be to increase
-          the use of our public transport as it is currently severely underused.
-        </p>
+    <div class="row justify-content-center">
+      <div class="card">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">
+            Transport Carbon Emissions
+          </h4>
+          <p class="card-text">
+            On average, each year people in New Zealand spend nearly 1,500
+            million hours travelling, and travel nearly 52,000 million km, in
+            over 6,500 million trip legs. However, only 4.9% of our total travel
+            time is using public transport. To take steps to improve New
+            Zealand's greenhouse emissions, the most impactful changes would be
+            to increase the use of our public transport as it is currently
+            severely underused.
+          </p>
+          <button
+            @click="scrollFns(1)"
+            type="button"
+            class="btn btn-warning mt-auto"
+          >
+            View Graph
+          </button>
+        </div>
       </div>
 
-      <div class="card-body" @click="chosenGraph = 2">
-        <h4 class="card-title">Caring for the Aged in COVID Times</h4>
-        <p class="card-text">
-          20% of New Zealand residents are made up of over 60s, the elderly have
-          been disproportionately affected by the Covid-19 pandemic so far and
-          the dangers of Covid still pose a larger danger for them than other
-          age groups. This danger can easily be increased with the struggle
-          elderly people face with adapting to new technology.
-        </p>
+      <div class="card" ref="card1">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Caring for the Aged in COVID Times</h4>
+          <p class="card-text">
+            Approximately 20% of New Zealand residents are made up of over 60s,
+            who have been disproportionately affected by the Covid-19 pandemic
+            so far. The dangers of Covid still pose a larger danger for the
+            elderly than any other age groups. This danger can easily be
+            increased with the struggle elderly people face with adapting to new
+            technology.
+          </p>
+          <button
+            @click="chosenGraph = 2"
+            type="button"
+            class="btn btn-warning mt-auto"
+          >
+            View Graph
+          </button>
+        </div>
       </div>
 
-      <div class="card-body" @click="chosenGraph = 3">
-        <h4 class="card-title">
-          Impact of Covid-19 on Public Transit usage
-        </h4>
-        <p class="card-text">
-          Across the world the fear of public transport has increased during
-          these unprecedented times and this has caused a decrease in its use.
-          See below graph to view the impact.
-        </p>
+      <div class="card">
+        <div class="card-body d-flex flex-column" @click="chosenGraph = 3">
+          <h4 class="card-title">
+            Impact of Covid-19 on Public Transit usage
+          </h4>
+          <p class="card-text">
+            Across the world the fear of public transport has increased during
+            these unprecedented times and this has caused a decrease in its use.
+          </p>
+          <button
+            @click="chosenGraph = 3"
+            type="button"
+            class="btn btn-warning  mt-auto"
+          >
+            View Graph
+          </button>
+        </div>
       </div>
     </div>
-    <div v-if="chosenGraphBool(1)" id="graph">
+    <div v-if="chosenGraphBool(1)" ref="graph1">
       <p>
         Share of total travel time in New Zealand 2015-2017
         <a
@@ -65,7 +97,7 @@
         />
       </a>
     </div>
-    <div v-else-if="chosenGraphBool(2)" id="graph">
+    <div v-else-if="chosenGraphBool(2)" ref="graph2">
       <p>
         Resident population of New Zealand
         <a href="https://figure.nz/chart/vm0qVHNtsrA3zFnr">figure.nz</a>
@@ -79,7 +111,7 @@
         />
       </a>
     </div>
-    <div v-else-if="chosenGraphBool(3)" id="graph">
+    <div v-else-if="chosenGraphBool(3)" ref="graph3">
       <p>
         The report, updated daily, is showing Moovit’s app usage of the previous
         7 days in each city, and comparing it to a typical week before the
@@ -113,24 +145,44 @@ export default {
   },
   computed: {
     ...mapGetters(["allDummyData"]),
+    scroll1() {
+      return document.getElementsByName("graph1");
+    },
   },
   methods: {
     chosenGraphBool(clicked) {
       return this.chosenGraph == clicked;
+    },
+    scroll() {
+      //let el = this.scroll1;
+      this.$refs.graph1[0].$el.focus();
+    },
+    scrollFns(graphNum) {
+      console.log(this.$refs.card1);
+      this.chosenGraph = graphNum;
+      this.scroll();
     },
   },
 };
 </script>
 
 <style>
-.card-body {
+#autoLogoTitle {
+  margin: 2em 2em;
+  width: 10%;
+  height: auto;
+}
+
+.card {
   padding: 3em 1em 1em 1em;
-  width: 30%;
+  width: 20vw;
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  margin: 2em;
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
 .card-text {
-  padding: 1em 2em 2em 2em;
+  padding: 1em 2em;
   text-align: left;
 }
 
