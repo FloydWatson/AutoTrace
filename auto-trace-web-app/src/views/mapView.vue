@@ -20,8 +20,9 @@ export default {
     return {};
   },
   computed: {
-    ...mapGetters(['allDummyData']),
+    ...mapGetters(['allRoutes', 'allStops', 'allUsers', 'allUserTrips']),
   },
+  methods: {},
   methods: {},
 };
 </script>
