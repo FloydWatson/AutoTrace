@@ -21,7 +21,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["allRoutes", "allStops", "allUsers", "allUserTrips"]),
+    ...mapGetters(["allRoutes", "allStops", "allUsers", "allUserTrips", "allInfectedRoutes"]),
     
   },
   methods: {

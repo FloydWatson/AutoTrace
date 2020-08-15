@@ -1,13 +1,15 @@
 import Route from "../../models/route.js";
 import User from "../../models/user.js";
 import Stop from "../../models/stop.js";
-import UserTrip from '../../models/userTrip';
+import UserTrip from "../../models/userTrip.js";
+import InfectedRoute from "../../models/infectedRoute.js";
 
 const state = {
   routes: [],
   stops: [],
   users: [],
   userTrips: [],
+  infectedRoutes: [],
   dummyData: [{}],
 };
 
@@ -16,6 +18,7 @@ const getters = {
   allStops: (state) => state.stops,
   allUsers: (state) => state.users,
   allUserTrips: (state) => state.userTrips,
+  allInfectedRoutes: (state) => state.infectedRoutes,
   allDummyData: (state) => state.dummyData,
 };
 
@@ -263,6 +266,126 @@ const actions = {
         lat: "-37.0295",
         lng: "174.88185",
       },
+      {
+        id: 16,
+        name: "108 Parrs Cross Rd",
+        lat: "-36.90502",
+        lng: "174.62593",
+      },
+      {
+        id: 17,
+        name: "367 West Coast Rd",
+        lat: "-36.90877",
+        lng: "174.63997",
+      },
+      {
+        id: 18,
+        name: "39 Great South Rd Otahuhu",
+        lat: "-36.93746",
+        lng: "174.83719",
+      },
+      {
+        id: 19,
+        name: "741 Great South Rd Mt Wellington",
+        lat: "-36.92358",
+        lng: "174.83024",
+      },
+      {
+        id: 20,
+        name: "3 Great South Rd Otahuhu",
+        lat: "-36.93648",
+        lng: "174.83624",
+      },
+      {
+        id: 21,
+        name: "Great South Rd near Penrose Station",
+        lat: "-36.90959",
+        lng: "174.81589",
+      },
+      {
+        id: 22,
+        name: "Westgate Dr near Maki St",
+        lat: "-36.82215",
+        lng: "174.61346",
+      },
+      {
+        id: 23,
+        name: "60 Westgate Dr",
+        lat: "-36.82731",
+        lng: "174.61534",
+      },
+      {
+        id: 24,
+        name: "2 Moa Ave",
+        lat: "-36.78536",
+        lng: "175.01579",
+      },
+      {
+        id: 25,
+        name: "54 Mako Street",
+        lat: "-36.78495",
+        lng: "175.00847",
+      },
+      {
+        id: 26,
+        name: "769 Sandringham Rd",
+        lat: "-36.90118",
+        lng: "174.73068",
+      },
+      {
+        id: 27,
+        name: "295 Sandringham Rd",
+        lat: "-36.88303",
+        lng: "174.73906",
+      },
+      {
+        id: 28,
+        name: "Parnell Train Station",
+        lat: "-36.85473",
+        lng: "174.7774",
+      },
+      {
+        id: 29,
+        name: "Newmarket Train Station",
+        lat: "-36.86972",
+        lng: "174.77883",
+      },
+      {
+        id: 30,
+        name: "220 Victoria St West",
+        lat: "-36.84815",
+        lng: "174.75241",
+      },
+      {
+        id: 31,
+        name: "68 College Hill",
+        lat: "-36.84798",
+        lng: "174.74667",
+      },
+      {
+        id: 32,
+        name: "848 Mt Eden Rd",
+        lat: "-36.8999",
+        lng: "174.75717",
+      },
+      {
+        id: 33,
+        name: "Mt Eden Rd near Three Kings School",
+        lat: "-36.90801",
+        lng: "174.75881",
+      },
+      {
+        id: 34,
+        name: "12 Orakei Rd",
+        lat: "-36.88057",
+        lng: "174.80291",
+      },
+      {
+        id: 35,
+        name: "90 Orakei Rd",
+        lat: "-36.87484",
+        lng: "174.80346",
+      },
     ];
 
     const stops = (data || []).map(
@@ -278,6 +401,83 @@ const actions = {
 
     commit("setStops", stops);
   },
+
+  createInfectedRoutes({ commit }) {
+      const data = [
+          {
+              id: 1,
+              name: "Parrs Park to Avondale College",
+              start: "16",
+              end: "17",
+          },
+          {
+              id: 2,
+              name: "Rosehill College To Wattle Downs",
+              start: "18",
+              end: "19",
+          },
+          {
+              id: 3,
+              name: "Waiheke Island 1 To Auckland 2",
+              start: "20",
+              end: "21",
+          },
+          {
+              id: 4,
+              name: "Wesley College/Paerata To Pukekohe Interchange",
+              start: "22",
+              end: "23",
+          },
+          {
+              id: 5,
+              name: "Bay 17 Manukau Bus Station",
+              start: "24",
+              end: "25",
+          },
+          {
+              id: 6,
+              name: "Ellerslie To Baradene",
+              start: "26",
+              end: "27",
+          },
+          {
+              id: 7,
+              name: "Stanmore Bay To Orewa College Via Vipond Rd",
+              start: "28",
+              end: "29",
+          },
+          {
+              id: 8,
+              name: "Inner Link Anticlockwise (S)",
+              start: "30",
+              end: "31",
+          },
+          {
+              id: 9,
+              name: "Britomart To Three Kings Via Mt Eden Rd",
+              start: "32",
+              end: "33",
+          },
+          {
+              id: 10,
+              name: "Epsom Schools to Glendowie",
+              start: "34",
+              end: "35",
+          }
+      ];
+
+      const infectedRoutes = (data || []).map(
+          (t) =>
+              new InfectedRoute(
+                  t.id,
+                  t.name,
+                  parseInt(t.start),
+                  parseInt(t.end),
+              )
+      );
+
+      commit("setInfectedRoutes", infectedRoutes);
+  }
 };
 
 const mutations = {
@@ -285,6 +485,7 @@ const mutations = {
   setStops: (state, stops) => (state.stops = stops),
   setUsers: (state, users) => (state.users = users),
   setUserTrips: (state, userTrips) => (state.userTrips = userTrips),
+  setInfectedRoutes: (state, infectedRoutes) => (state.infectedRoutes = infectedRoutes),
   setDummyData: (state, dummyData) => (state.dummyData = dummyData),
 };
 
