@@ -7,31 +7,28 @@
 </template>
 
 <script>
-  import { mapActions } from "vuex";
-
+import { mapActions } from "vuex";
+import NavBar from "./components/navbar.vue";
+import GoogleMap from "./components/map.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    
+    NavBar,
+    GoogleMap,
   },
   methods: {
-    ...mapActions(["createRoutes", "createUser", "createUserTrips", "createStops"])
+    ...mapActions([
+      "createRoutes",
+      "createUser",
+      "createUserTrips",
+      "createStops",
+    ]),
   },
-  mounted(){
+  mounted() {
     this.createRoutes();
     this.createUser();
     this.createUserTrips();
     this.createStops();
-
-  }
-}
-import NavBar from './components/navbar.vue';
-import GoogleMap from './components/map.vue';
-export default {
-  name: 'App',
-  components: {
-    NavBar,
-    GoogleMap,
   },
 };
 </script>
