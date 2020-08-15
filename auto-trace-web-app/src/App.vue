@@ -7,7 +7,7 @@
 
 <script>
 import NavBar from './components/navbar.vue';
-
+import {mapActions} from "vuex"
 export default {
   name: "App",
   components: {
