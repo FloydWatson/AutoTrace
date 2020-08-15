@@ -150,10 +150,8 @@ table {
 td,
 th {
   padding: 6px;
-  text-align: left;
-}
-tbody tr:nth-child(even) {
-  background-color: #f7f7f7;
+  text-align: left;  
+  border: 1px solid black;
 }
 
 </style>
