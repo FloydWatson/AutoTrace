@@ -26,7 +26,7 @@
         </p>
       </div>
 
-      <div class="card-body">
+      <div class="card-body" @click="chosenGraph = 2">
         <h4 class="card-title">Caring for the Aged in COVID Times</h4>
         <p class="card-text">
           20% of New Zealand residents are made up of over 60s, the elderly have
@@ -73,7 +73,7 @@
 
       <a class="navbar-brand" href="#">
         <img
-          src="../assets/emissions.png"
+          src="../assets/population.png"
           id="ptGraph"
           alt="Public Transport Graph"
         />
