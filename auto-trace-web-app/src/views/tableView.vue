@@ -1,17 +1,17 @@
 <template>
   <div class="container">
     <!-- <h2>HOME</h2> -->
-    <hello-world :msg="'TEST'"></hello-world>
+    <close-contact-table></close-contact-table>
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
-import helloWorld from '../components/HelloWorld.vue';
+import CloseContactTable from '../components/CloseContactTable.vue';
 
 export default {
   components:{  
-    helloWorld
+    CloseContactTable
   },
   data() {
     return {
