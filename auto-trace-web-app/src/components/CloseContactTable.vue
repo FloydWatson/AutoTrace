@@ -1,42 +1,51 @@
 <template>
   <div class="hello">
-    <p>{{UserID}}</p>
+    <h2>contact tracing</h2>
     <input type="number" v-model="UserID" placeholder="UserID" />
     <div v-if="getRoutes().length>0">
-    <h3>buses taken</h3>
-    <table>
-      <tr>
-        <th>id</th>
-        <th>start</th>
-        <th>end</th>
-        <th>route</th>
+      <h3>buses taken</h3>
+      <table class="table table-striped table-hover">
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">start</th>
+          <th scope="col">end</th>
+          <th scope="col">route</th>
 
-        <th>start Time</th>
-        <th>end Time</th>
-      </tr>
-      <tr v-for="i in getRoutes()" :key="i.id">
-        <td>{{i.id}}</td>        <td>{{i.start}}</td><td>{{i.end}}</td><td>{{i.route}}</td><td>{{i.starttime}}</td>  <td>{{i.endTime}}</td>  
-      </tr>
-    </table>
+          <th>start Time</th>
+          <th>end Time</th>
+        </tr>
+        <tbody>
+          <tr v-for="i in getRoutes()" :key="i.id">
+            <td>{{i.id}}</td>
+            <td>{{i.start}}</td>
+            <td>{{i.end}}</td>
+            <td>{{i.route}}</td>
+            <td>{{i.starttime}}</td>
+            <td>{{i.endTime}}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <br>
+    <br />
     <div v-if="getContacts().length>0">
-    <h3>close contacts</h3>
-    <table>
-      <tr>
-        <th>id</th>
-        <th>phone</th>
-        <th>name</th>
-        <th>route</th>
-      </tr>
-      <tr v-for="i in getContacts()" :key="i.id">
-        <td>{{i.id}}</td>
-        <td>{{i.phone}}</td>
-        <td>{{i.name}}</td>
-        <td>{{i.route}}</td>
-      </tr>
-    </table>
+      <h3>close contacts</h3>
+      <table class="table table-striped table-hover">
+        <tr>
+          <th>id</th>
+          <th>phone</th>
+          <th>name</th>
+          <th>route</th>
+        </tr>
+        <tbody>
+          <tr v-for="i in getContacts()" :key="i.id">
+            <td>{{i.id}}</td>
+            <td><a :href="'tel:' + i.phone">{{i.phone}}</a></td>
+            <td>{{i.name}}</td>
+            <td>{{i.route}}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </template>
@@ -102,6 +111,9 @@ export default {
           }
         }
       }
+      contactTable = contactTable.filter(
+        (v, i, a) => a.findIndex((t) => t.id === v.id) === i
+      );
 
       // 1598486400
       return contactTable;
@@ -128,12 +140,11 @@ export default {
           start: start[0].name,
           end: stop[0].name,
           route: r[0].name,
-          starttime:new Date(idTrips[i].startTime * 1000),
-          endTime:new Date(idTrips[i].endTime * 1000)
+          starttime: new Date(idTrips[i].startTime * 1000),
+          endTime: new Date(idTrips[i].endTime * 1000),
         };
         formatedTrips.push(row);
       }
-      console.log(idTrips);
       return formatedTrips;
     },
   },
@@ -141,17 +152,4 @@ export default {
 </script>
 
 <style scoped>
-table {
-  border-collapse: collapse;
-  margin-bottom: 10px;
-  width: 100%;
-}
-
-td,
-th {
-  padding: 6px;
-  text-align: left;  
-  border: 1px solid black;
-}
-
 </style>
