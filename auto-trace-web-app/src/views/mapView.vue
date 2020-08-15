@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <!-- <h2>HOME</h2> -->
     <google-map></google-map>
     <hello-world :msg="'TEST'"></hello-world>
