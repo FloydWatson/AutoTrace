@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <nav-bar></nav-bar>
+    <google-map></google-map>
     <router-view></router-view>
   </div>
 </template>
@@ -23,6 +25,15 @@ export default {
 
   }
 }
+import NavBar from './components/navbar.vue';
+import GoogleMap from './components/map.vue';
+export default {
+  name: 'App',
+  components: {
+    NavBar,
+    GoogleMap,
+  },
+};
 </script>
 
 <style>
@@ -32,6 +43,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
