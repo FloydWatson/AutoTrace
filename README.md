@@ -1,7 +1,7 @@
 # AutoTrace
 
 ## what is this app
-AutoTrace is written as an extension to the current [NZ COVID tracker app](https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-novel-coronavirus-resources-and-tools/nz-covid-tracer-app
+AutoTrace is made as an extension to the current [NZ COVID tracker app](https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-novel-coronavirus-resources-and-tools/nz-covid-tracer-app
 ) due to the manual nature of using the app on public transport, incorporating AutoTrace to the already existing app would allow or the app to track when you got on and off of public transport allowing for ease of contact tracing and improve the confidence of everyday transport users, to get moving again in an environmentally friendly way.
 
 ### how this app works
@@ -12,7 +12,7 @@ The admin side of this app is for contact tracing use only. It allows for you to
 ## how to setup/install program
 
 ### webapp
-#### requirements
+#### dependencies
 node 
 
 [download for your platform here](https://nodejs.org/en/download/)
@@ -22,20 +22,20 @@ vue
 npm install vue -g
 ```
 
-for other dependency run this command in auto-trace-web-app folder
+for other dependencies run this command in auto-trace-web-app folder
 ```
 npm install
 ```
 #### running the webapp
 
-run the following commands in auto-trace-web-app in order to run webapp 
+run the following commands in auto-trace-web-app to run the webapp 
 ```
 npm run serve
 ``` 
 
 
 ### flutter user app
-#### requirements
+#### dependencies
 flutter
 
 [download here](https://flutter.dev/docs/get-started/install)
@@ -63,5 +63,6 @@ these data sets made pinecone want to make public transport the default way or t
 [car/bike crash statistics](https://catalogue.data.govt.nz/dataset/mot-resources-road-safety-resources-roadcrashstatistics-monthlyoverviewofcrashstatistics)
 
 [Level railroad crash  statistics](https://catalogue.data.govt.nz/dataset/mot-resources-road-safety-resources-roadcrashstatistics-raillevelcrossingstatistics)
+
 
 
