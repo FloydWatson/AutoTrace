@@ -2,7 +2,9 @@
   <div class="hello">
     <p>{{UserID}}</p>
     <input type="number" v-model="UserID" placeholder="UserID" />
-    <table v-if="getRoutes().length>0">
+    <div v-if="getRoutes().length>0">
+    <h3>buses taken</h3>
+    <table>
       <tr>
         <th>id</th>
         <th>start</th>
@@ -16,8 +18,12 @@
         <td>{{i.id}}</td>        <td>{{i.start}}</td><td>{{i.end}}</td><td>{{i.route}}</td><td>{{i.starttime}}</td>  <td>{{i.endTime}}</td>  
       </tr>
     </table>
+    </div>
 
-    <table v-if="getContacts().length>0">
+    <br>
+    <div v-if="getContacts().length>0">
+    <h3>close contacts</h3>
+    <table>
       <tr>
         <th>id</th>
         <th>phone</th>
@@ -31,6 +37,7 @@
         <td>{{i.route}}</td>
       </tr>
     </table>
+    </div>
   </div>
 </template>
 <script>
@@ -133,3 +140,20 @@ export default {
 };
 </script>
 
+<style scoped>
+table {
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+td,
+th {
+  padding: 6px;
+  text-align: left;
+}
+tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+</style>
