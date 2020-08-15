@@ -1,16 +1,19 @@
 <template>
   <div class="container">
     <!-- <h2>HOME</h2> -->
-    <h1>AutoTrace</h1>
-    <iframe width="80%" height="420" src="https://www.youtube.com/embed/oHg5SJYRHA0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <google-map></google-map>
+    <hello-world :msg="'TEST'"></hello-world>
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
-
+import helloWorld from '../components/HelloWorld.vue';
+import GoogleMap from '../components/map.vue';
 export default {
   components:{  
+    helloWorld,
+    GoogleMap,
   },
   data() {
     return {
@@ -18,7 +21,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["allDummyData"]),
+    ...mapGetters(["allRoutes", "allStops", "allUsers", "allUserTrips"]),
     
   },
   methods: {

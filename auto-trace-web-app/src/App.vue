@@ -1,20 +1,17 @@
 <template>
   <div id="app">
     <nav-bar></nav-bar>
-    <google-map></google-map>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import { mapActions } from "vuex";
-import NavBar from "./components/navbar.vue";
-import GoogleMap from "./components/map.vue";
+import NavBar from './components/navbar.vue';
+import {mapActions} from "vuex"
 export default {
   name: "App",
   components: {
     NavBar,
-    GoogleMap,
   },
   methods: {
     ...mapActions([
