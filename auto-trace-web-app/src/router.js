@@ -15,6 +15,11 @@ const router = new Router({
       name:"tableView",
       component: () => import("./views/tableView.vue"),
     },
+    {
+      path: "/mapView",
+      name:"mapView",
+      component: () => import("./views/mapView.vue"),
+    },
   ],
 });
 
