@@ -1,15 +1,15 @@
 # AutoTrace
 
-## what is this app
+## What is this app?
 AutoTrace is made as an extension to the current [NZ COVID tracker app](https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-novel-coronavirus-resources-and-tools/nz-covid-tracer-app
-) due to the manual nature of using the app on public transport, incorporating AutoTrace to the already existing app would allow or the app to track when you got on and off of public transport allowing for ease of contact tracing and improve the confidence of everyday transport users, to get moving again in an environmentally friendly way.
+) due to the manual nature of using the app on public transport, incorporating AutoTrace to the already existing app would allow for the app to track when you get on and off of public transport, allowing for ease of contact tracing and improves the confidence of everyday transport users, to get moving again in an environmentally friendly way.
 
-### how this app works
-a resident would install the app and enable tracking when the user enters the geofence of a bus, they are considered on the bus, and the app reports this to our server so that we know when and where they joined what but, when the user leaves the bus geofence we keep that, from this, we can find all users who got on the bus at the same time as any user so if a user tests positive for COVID we can find all bus users they shared a bus with for contact tracing, this can be extended to any form of transport if given tracking data of there vehicles, this implementation is far easier for a user compared to the current solution of entering all the data manually something that a lot of kiwis will forget todo
+### How this app works
+A resident would install the app and enable tracking. When the user enters the geofence of a bus, they are considered on the bus, and the app reports this to our server. This ensures  that we know when and where they boarded but also when and where the user leaves the bus geofence. From this, we can find all users who got on the bus at the same time as any other user, so if a user tests positive for COVID, we can find all bus users and the bus for contact tracing. This can be extended to any form of transport if given tracking data of their vehicles. This implementation is far easier for a user compared to the current solution of entering all the data manually, something that a lot of kiwis will forget to do.
 
-The admin side of this app is for contact tracing use only. It allows for you to enter a user id and see all contacts and there contact details, along with the routes the infected users used allowing for broader contact tracing of people who don’t use the app.
+The admin side of this app is for contact tracing use only. It allows for admin to enter a user_id and see all contacts and there contact details, along with the routes the infected users travelled allowing for broader contact tracing of people who don’t use the app.
 
-## how to setup/install program
+## How to setup/install program
 
 ### webapp
 #### dependencies
