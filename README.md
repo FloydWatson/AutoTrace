@@ -1,8 +1,8 @@
 # AutoTrace
-
+![Image of AutoTrace Logo](https://raw.githubusercontent.com/FloydWatson/AutoTrace/master/auto-trace-web-app/src/assets/auto_logo.png)
 ## What is this app?
 AutoTrace is made as an extension to the current [NZ COVID tracker app](https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-novel-coronavirus-resources-and-tools/nz-covid-tracer-app
-) due to the manual nature of using the app on public transport, incorporating AutoTrace to the already existing app would allow for the app to track when you get on and off of public transport, allowing for ease of contact tracing and improves the confidence of everyday transport users, to get moving again in an environmentally friendly way.
+). Due to the manual nature of using the app on public transport, incorporating AutoTrace to the already existing NZ tracing app, would allow for the app to track when you get on and off of public transport. This allows for ease of contact tracing and improves the confidence of everyday transport users, to get the country moving again in an environmentally friendly way.
 
 ### How this app works
 A resident would install the app and enable tracking. When the user enters the geofence of a bus, they are considered on the bus, and the app reports this to our server. This ensures  that we know when and where they boarded but also when and where the user leaves the bus geofence. From this, we can find all users who got on the bus at the same time as any other user. If a user then tests positive for COVID, we can find all shared bus users for contact tracing. This can be extended to any form of transport if given tracking data of their vehicles. This implementation is far easier for a user compared to the current solution of entering all the data manually, something that a lot of kiwis will forget to do.
