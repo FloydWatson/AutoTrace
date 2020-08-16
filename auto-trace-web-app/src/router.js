@@ -20,6 +20,7 @@ const router = new Router({
       name:"mapView",
       component: () => import("./views/mapView.vue"),
     },
+    { path: '*', redirect: '/home' },
   ],
 });
 
