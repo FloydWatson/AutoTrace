@@ -1,18 +1,18 @@
 <template>
   <div class="hello">
-    <h2>contact tracing</h2>
+    <h2>Contact Tracing</h2>
     <input type="number" v-model="UserID" placeholder="UserID" />
     <div v-if="getRoutes().length>0">
-      <h3>buses taken</h3>
+      <h3>Buses Taken</h3>
       <table class="table table-striped table-hover">
         <tr>
-          <th scope="col">id</th>
-          <th scope="col">start</th>
-          <th scope="col">end</th>
-          <th scope="col">route</th>
+          <th scope="col">Id</th>
+          <th scope="col">Start</th>
+          <th scope="col">End</th>
+          <th scope="col">Route</th>
 
-          <th>start Time</th>
-          <th>end Time</th>
+          <th>Start Time</th>
+          <th>End Time</th>
         </tr>
         <tbody>
           <tr v-for="i in getRoutes()" :key="i.id">
@@ -29,13 +29,13 @@
 
     <br />
     <div v-if="getContacts().length>0">
-      <h3>close contacts</h3>
+      <h3>Close Contacts</h3>
       <table class="table table-striped table-hover">
         <tr>
-          <th>id</th>
-          <th>phone</th>
-          <th>name</th>
-          <th>route</th>
+          <th>Id</th>
+          <th>Phone</th>
+          <th>Name</th>
+          <th>Route</th>
         </tr>
         <tbody>
           <tr v-for="i in getContacts()" :key="i.id">
