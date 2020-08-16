@@ -19,6 +19,7 @@ export default {
       "createUser",
       "createUserTrips",
       "createStops",
+      "createInfectedRoutes",
     ]),
   },
   mounted() {
@@ -26,6 +27,7 @@ export default {
     this.createUser();
     this.createUserTrips();
     this.createStops();
+    this.createInfectedRoutes();
   },
 };
 </script>

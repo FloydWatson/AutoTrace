@@ -1,32 +1,29 @@
 <template>
-  <div class="container">
-    <!-- <h2>HOME</h2> -->
+  <div>
     <google-map></google-map>
-    <hello-world :msg="'TEST'"></hello-world>
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import helloWorld from '../components/HelloWorld.vue';
+import { mapGetters } from 'vuex';
 import GoogleMap from '../components/map.vue';
 export default {
-  components:{  
-    helloWorld,
+  components: {
     GoogleMap,
   },
   data() {
-    return {
-      
-    };
+    return {};
   },
   computed: {
-    ...mapGetters(["allRoutes", "allStops", "allUsers", "allUserTrips"]),
-    
+    ...mapGetters([
+      'allRoutes',
+      'allStops',
+      'allUsers',
+      'allUserTrips',
+      'allInfectedRoutes',
+    ]),
   },
-  methods: {
-    
-  },
+  methods: {},
 };
 </script>
 
