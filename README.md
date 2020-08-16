@@ -1,4 +1,5 @@
-# AutoTrace
+# AutoTrace 
+![logo](./auto-trace-web-app/src/assets/auto_logo.png)
 
 ## what is this app
 AutoTrace is made as an extension to the current [NZ COVID tracker app](https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-novel-coronavirus-resources-and-tools/nz-covid-tracer-app
@@ -9,7 +10,7 @@ a resident would install the app and enable tracking when the user enters the ge
 
 The admin side of this app is for contact tracing use only. It allows for you to enter a user id and see all contacts and there contact details, along with the routes the infected users used allowing for broader contact tracing of people who don’t use the app.
 
-## how to setup/install program
+## how to setup/install AutoTrace
 
 ### webapp
 #### dependencies
