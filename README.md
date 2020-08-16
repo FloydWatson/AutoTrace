@@ -14,9 +14,14 @@ The admin side of this app is for contact tracing use only. It allows for admin 
 When researching data about AutoTrace we looked into three main areas; traffic pollution, Aged use of public transport and the pandemics influence on the use of public transport to try to justify the need for this extension to the existing COVID tracing app. Below shows the journey we took to get to where we are now, and how we interpreted the data to enable us to see the need for this product.
 
 ### Quick Stats
-| 100% | 70% | 90% | 44% |
-|:---:|:---:|:---:|:---:|:---:|
-|Increase in gold card usage on public transport in the last 10 years | Decrease in road traffic during the pandemic | Decrease in public transportation use during the pandemic | Repondants reasoning as to why they havent been using public transport during the pandemic |
+##### 100% 
+Increase in gold card usage on public transport in the last 10 years
+##### 70%
+Decrease in road traffic during the pandemic
+##### 90%
+Decrease in public transportation use during the pandemic
+##### 44%
+Repondants reasoning as to why they havent been using public transport during the pandemic |
 
 ### Aged Care Data
 ![Population by Age in NZ](https://raw.githubusercontent.com/FloydWatson/AutoTrace/development/auto-trace-web-app/src/assets/population.PNG)
